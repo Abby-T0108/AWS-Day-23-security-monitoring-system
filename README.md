@@ -6,12 +6,12 @@ Built with managed AWS security services and serverless automation. Focused on a
                             
                              Architecture
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     ┌─────────────┐
-│  CloudTrail │───▶│  GuardDuty  │───▶│ EventBridge│───▶│   Lambda    │
+│  CloudTrail │───│  GuardDuty  │───│ EventBridge│───│   Lambda    │
 │   Logging   │    │  Detection  │    │   Rules     │     │  Response   │
 └─────────────┘    └─────────────┘    └─────────────┘     └──────┬──────┘
                                                                  │
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐            │
-│ SecurityHub │    │ CloudWatch  │    │     SNS     │◀───────────┘
+│ SecurityHub │    │ CloudWatch  │    │     SNS     │───────────┘
 │   Findings  │    │ Dashboard   │    │  Alerts     │
 └─────────────┘    └─────────────┘    └─────────────┘
 
